@@ -4,9 +4,38 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.EmployeeDao">
 
+    <insert id="addemployee" parameterType="employee">
+      insert into employee(id,name,age,sex,address,phone)
+      values (#{id},#{name},#{age},#{sex},#{address},#{phone})
+   </insert>
+
+    <!--根据id删除一个employee-->
+    <delete id="deleteemployeeById" parameterType="int">
+      delete from employee where ID=#{employeeId}
+   </delete>
+
+    <!--更新employee-->
+    <update id="updateemployee" parameterType="employee">
+      update employee
+      set name = #{name},age = #{age},sex = #{sex},address=#{address},phone=#{phone},password=#{password}
+      where id = #{id}
+   </update>
+
+    <!--根据id查询,返回一个employee-->
+    <select id="queryemployeeById" resultType="employee">
+      select * from employee
+      where Id = #{employeeId}
+   </select>
+
     <!--查询全部Employee-->
     <select id="queryAll" resultType="Employee">
       SELECT * from employee
    </select>
+    <select id="queryemployeeByName" resultType="Employee">
+      select * from employee
+      where employeeName = #{employeeName}
+   </select>
+
+
 
 </mapper>

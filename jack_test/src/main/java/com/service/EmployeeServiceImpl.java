@@ -19,7 +19,29 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeDao = employeeDao;
     }
 
+
+
+    public int addemployee(Employee employee) {
+        return employeeDao.addemployee(employee);
+    }
+
+    public int deleteemployeeById(int Id) {
+        return employeeDao.deleteemployeeById(Id);
+    }
+
+    public int updateemployee(Employee employee) {
+        return employeeDao.updateemployee(employee);
+    }
+
+    public Employee queryemployeeById(int id) {
+        return employeeDao.queryemployeeById(id);
+    }
+
     public List<Employee> queryAll() {
         return employeeDao.queryAll();
+    }
+
+    public Employee queryemployeeByName(String employeeName) {
+        return employeeDao.queryemployeeByName(employeeName);
     }
 }

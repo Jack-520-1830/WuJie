@@ -13,7 +13,7 @@ public class Employee {
 private int id;
 private String name;
 private  int age;
-private int sex;
+private String sex;
 private String address;
 private String phone;
 private int password;
@@ -21,7 +21,7 @@ private int password;
     public Employee() {
     }
 
-    public Employee(int id, String name, int age, int sex, String address, String phone, int password) {
+    public Employee(int id, String name, int age, String sex, String address, String phone, int password) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -55,11 +55,11 @@ private int password;
         this.age = age;
     }
 
-    public int getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
