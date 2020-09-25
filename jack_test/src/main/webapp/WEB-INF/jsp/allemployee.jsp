@@ -24,13 +24,13 @@
 
    <div class="row">
         <div class="col-md-4 column">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增员工</a>
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/allbook">显示全部员工</a>
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/employee/toAddemployee">新增员工</a>
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/employee/allemployee">显示全部员工</a>
         </div>
         <div class="col-md-4 column"></div>
         <div class="col-md-4 column">
-            <form class="form-inline" action="${pageContext.request.contextPath}/book/queryBook" method="post" style="float: right">
-                 <input type="text" name="queryBookByName" class="form-control" placeholder="请输入员工姓名" required>
+            <form class="form-inline" action="${pageContext.request.contextPath}/employee/queryemployee" method="post" style="float: right">
+                 <input type="text" name="queryemployeeByName" class="form-control" placeholder="请输入员工姓名" required>
                  <input type="submit" value="查询" class="btn btn-primary">
             </form>
               </div>
@@ -61,7 +61,7 @@
                         <td>${employee.getAddress()}</td>
                         <td>${employee.getPhone()}</td>
                         <td>
-                           <a href="${pageContext.request.contextPath}/employee/toUpdateBook?id=${employee.getId()}">更改</a> |
+                           <a href="${pageContext.request.contextPath}/employee/toUpdateemployee?id=${employee.getId()}">更改</a> |
                             <a href="${pageContext.request.contextPath}/employee/del/${employee.getId()}">删除</a>
                        </td>
                     </tr>
